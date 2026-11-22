@@ -49,9 +49,13 @@ function nextOccurrence(day, monthKey, today) {
   throw new Error(`Could not find next occurrence for day ${day} month ${monthKey}`);
 }
 
+function normalize(name) {
+  return name.toLowerCase().replace(/[^a-z]/g, '');
+}
+
 function assertMonthNameMatches(monthKey, resolvedName) {
-  const expectedPrefix = monthKey === 'Adar' ? 'Adar' : monthKey;
-  if (!resolvedName.startsWith(expectedPrefix)) {
+  const expectedPrefix = normalize(monthKey === 'Adar' ? 'Adar' : monthKey);
+  if (!normalize(resolvedName).startsWith(expectedPrefix)) {
     throw new Error(
       `Month mismatch: expected something starting with "${expectedPrefix}" but hebcal resolved "${resolvedName}". ` +
         'The month-number mapping in this script is likely wrong - fix MONTH_NUM before trusting any dates.'
