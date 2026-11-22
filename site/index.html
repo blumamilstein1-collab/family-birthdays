@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ימי הולדת במשפחה</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="gate" class="gate">
+    <div class="gate-box">
+      <h1>ימי הולדת במשפחה</h1>
+      <p>האתר הזה פרטי למשפחה. הזינו את הסיסמה כדי להיכנס.</p>
+      <input id="password-input" type="password" placeholder="סיסמה" />
+      <button id="unlock-button">כניסה</button>
+      <p id="gate-error" class="error"></p>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header>
+      <h1>ימי הולדת במשפחה</h1>
+      <p class="subtitle">מסודר לפי הקרוב ביותר</p>
+    </header>
+    <main id="cards" class="cards"></main>
+    <footer>
+      <p id="updated-at"></p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
