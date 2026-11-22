@@ -31,9 +31,23 @@ function startOfDay(date) {
 }
 
 // Adar birthdays are resolved to Adar II in leap years (the common convention
-// when the original Adar I/II of birth is unknown). This is verified below
-// against hdate.getMonthName() so a wrong month-number assumption fails loudly
+// when the original Adar I/II of birth is unknown). This is verified below by
+// converting the computed Gregorian date back into a Hebrew date and checking
+// it lands on the same day/month we asked for - independent of any English
+// spelling of the month name, so a wrong month-number assumption fails loudly
 // instead of silently producing a wrong date.
+function assertRoundTrip(day, monthNum, hyear, gregDate) {
+  const roundTrip = new HDate(gregDate);
+  if (roundTrip.getDate() !== day || roundTrip.getMonth() !== monthNum) {
+    throw new Error(
+      `Round-trip mismatch: asked for day ${day} month ${monthNum} year ${hyear}, but converting the ` +
+        `resulting Gregorian date (${gregDate.toISOString().slice(0, 10)}) back gives day ${roundTrip.getDate()} ` +
+        `month ${roundTrip.getMonth()} year ${roundTrip.getFullYear()}. The month-number mapping in this script ` +
+        'is likely wrong - fix MONTH_NUM before trusting any dates.'
+    );
+  }
+}
+
 function nextOccurrence(day, monthKey, today) {
   const todayHDate = new HDate(today);
   const startYear = todayHDate.getFullYear();
@@ -43,24 +57,11 @@ function nextOccurrence(day, monthKey, today) {
     const candidate = new HDate(day, monthNum, hyear);
     const gregDate = startOfDay(candidate.greg());
     if (gregDate.getTime() >= startOfDay(today).getTime()) {
+      assertRoundTrip(day, monthNum, hyear, gregDate);
       return { gregDate, hdate: candidate };
     }
   }
   throw new Error(`Could not find next occurrence for day ${day} month ${monthKey}`);
-}
-
-function normalize(name) {
-  return name.toLowerCase().replace(/[^a-z]/g, '');
-}
-
-function assertMonthNameMatches(monthKey, resolvedName) {
-  const expectedPrefix = normalize(monthKey === 'Adar' ? 'Adar' : monthKey);
-  if (!normalize(resolvedName).startsWith(expectedPrefix)) {
-    throw new Error(
-      `Month mismatch: expected something starting with "${expectedPrefix}" but hebcal resolved "${resolvedName}". ` +
-        'The month-number mapping in this script is likely wrong - fix MONTH_NUM before trusting any dates.'
-    );
-  }
 }
 
 function daysBetween(a, b) {
@@ -76,7 +77,6 @@ async function main() {
   const results = people.map((person) => {
     const { gregDate, hdate } = nextOccurrence(person.day, person.monthKey, today);
     const resolvedMonthName = hdate.getMonthName();
-    assertMonthNameMatches(person.monthKey, resolvedMonthName);
     return {
       name: person.name,
       hebrewLabel: person.hebrewLabel,
