@@ -1,7 +1,7 @@
 // This is a light "keep casual visitors out" gate, not real security - the
 // data on this site is low-sensitivity (first names and Hebrew birth dates).
 const PASSWORD_HASH_HEX =
-  "c5909d0929a792e9d173dfb2955b0d566813037def3bf7f581b8ac18c3b9601d";
+  "19ffec6f803a30200b135e2f8dfe1d6ac90703f27a23aa528aa55bb091fbafcf";
 const STORAGE_KEY = "family-birthdays-unlocked";
 
 // EmailJS config - these are the public client-side IDs (not secrets), from
