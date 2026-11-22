@@ -35,11 +35,17 @@ function formatGregorian(isoDate) {
   return d.toLocaleDateString("he-IL", { day: "numeric", month: "long", year: "numeric" });
 }
 
+function cardIcon(daysUntil) {
+  if (daysUntil <= 7) return "🎉";
+  if (daysUntil <= 14) return "🎈";
+  return "🎂";
+}
+
 function buildCard(person) {
   const card = document.createElement("div");
   card.className = "card" + (person.daysUntil <= 14 ? " soon" : "");
   card.innerHTML = `
-    <div class="name">${person.name}</div>
+    <div class="name">${cardIcon(person.daysUntil)} ${person.name}</div>
     <div class="hebrew-date">${person.hebrewLabel}</div>
     <div class="days">${dayLabel(person.daysUntil)}</div>
     <div class="greg-date">${formatGregorian(person.nextGregorianDate)}</div>
@@ -128,7 +134,7 @@ let activePerson = null;
 
 function openGreetingModal(person) {
   activePerson = person;
-  document.getElementById("modal-title").textContent = `ברכה ל${person.name}`;
+  document.getElementById("modal-title").textContent = `🎁 ברכה ל${person.name}`;
   document.getElementById("greeting-text").value = "";
   document.getElementById("greeting-status").textContent = "";
   document.getElementById("greeting-send").disabled = false;
