@@ -82,6 +82,8 @@ async function main() {
       hebrewLabel: person.hebrewLabel,
       monthKey: person.monthKey,
       resolvedMonthName,
+      family: person.family,
+      familyEmail: person.familyEmail,
       nextGregorianDate: gregDate.toISOString().slice(0, 10),
       daysUntil: daysBetween(today, gregDate),
     };

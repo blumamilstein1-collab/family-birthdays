@@ -20,7 +20,10 @@
   <div id="app" class="app hidden">
     <header>
       <h1>ימי הולדת במשפחה</h1>
-      <p class="subtitle">מסודר לפי הקרוב ביותר</p>
+      <div class="view-toggle">
+        <button id="view-date" class="toggle-btn active">לפי תאריך</button>
+        <button id="view-family" class="toggle-btn">לפי משפחה</button>
+      </div>
     </header>
     <main id="cards" class="cards"></main>
     <footer>
@@ -28,6 +31,18 @@
     </footer>
   </div>
 
+  <div id="greeting-modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <button id="modal-close" class="modal-close">&times;</button>
+      <h2 id="modal-title"></h2>
+      <p class="modal-sub">הברכה תישלח למייל המשפחתי המשויך</p>
+      <textarea id="greeting-text" rows="5" placeholder="כתבו כאן ברכה חמה..."></textarea>
+      <button id="greeting-send" class="send-btn">שליחה</button>
+      <p id="greeting-status"></p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -1,24 +1,29 @@
 [
-  { "name": "רחל שטול", "day": 25, "monthKey": "Tishrei", "hebrewLabel": "כה' תשרי" },
-  { "name": "אשר שטול", "day": 14, "monthKey": "Tamuz", "hebrewLabel": "יד' תמוז" },
-  { "name": "רבקי וירניק", "day": 26, "monthKey": "Tevet", "hebrewLabel": "כו' טבת" },
-  { "name": "בלימי מילשטיין", "day": 18, "monthKey": "Iyyar", "hebrewLabel": "יח' אייר" },
-  { "name": "עטרה חסידה", "day": 1, "monthKey": "Shevat", "hebrewLabel": "א' שבט" },
-  { "name": "יהודית מילשטיין", "day": 4, "monthKey": "Shevat", "hebrewLabel": "ד' שבט" },
-  { "name": "הני פלבינסקי", "day": 12, "monthKey": "Tevet", "hebrewLabel": "יב' טבת" },
-  { "name": "דני שטול", "day": 9, "monthKey": "Adar", "hebrewLabel": "ט' אדר" },
-  { "name": "הרשי וירניק", "day": 10, "monthKey": "Tevet", "hebrewLabel": "י' טבת" },
-  { "name": "ארי וירניק", "day": 10, "monthKey": "Sivan", "hebrewLabel": "י' סיון" },
-  { "name": "חיים מילשטיין", "day": 4, "monthKey": "Shevat", "hebrewLabel": "ד' שבט" },
-  { "name": "הני מילשטיין", "day": 20, "monthKey": "Iyyar", "hebrewLabel": "כ' אייר" },
-  { "name": "צביקי מילשטיין", "day": 29, "monthKey": "Av", "hebrewLabel": "כט' אב" },
-  { "name": "דודי מילשטיין", "day": 6, "monthKey": "Elul", "hebrewLabel": "ו' אלול" },
-  { "name": "ריקי מילשטיין", "day": 3, "monthKey": "Av", "hebrewLabel": "ג' אב" },
-  { "name": "שמחה חסידה", "day": 10, "monthKey": "Kislev", "hebrewLabel": "י' כסליו" },
-  { "name": "ארי חסידה", "day": 17, "monthKey": "Cheshvan", "hebrewLabel": "יז' חשון" },
-  { "name": "אלי חסידה", "day": 5, "monthKey": "Sivan", "hebrewLabel": "ה' סיון" },
-  { "name": "מוטי מילשטיין", "day": 15, "monthKey": "Adar", "hebrewLabel": "טו' אדר" },
-  { "name": "אלי מילשטיין", "day": 3, "monthKey": "Av", "hebrewLabel": "ג' אב" },
-  { "name": "אבריימי פלבינסקי", "day": 21, "monthKey": "Iyyar", "hebrewLabel": "כא' אייר" },
-  { "name": "צביקי פלבינסקי", "day": 19, "monthKey": "Sivan", "hebrewLabel": "יט' סיון" }
+  { "name": "רחל שטול", "day": 25, "monthKey": "Tishrei", "hebrewLabel": "כה' תשרי", "family": "שטול", "familyEmail": "r6366029@gmail.com" },
+  { "name": "אשר שטול", "day": 14, "monthKey": "Tamuz", "hebrewLabel": "יד' תמוז", "family": "שטול", "familyEmail": "r6366029@gmail.com" },
+  { "name": "דני שטול", "day": 9, "monthKey": "Adar", "hebrewLabel": "ט' אדר", "family": "שטול", "familyEmail": "r6366029@gmail.com" },
+
+  { "name": "רבקי וירניק", "day": 26, "monthKey": "Tevet", "hebrewLabel": "כו' טבת", "family": "וירניק", "familyEmail": "rv7123535@gmail.com" },
+  { "name": "הרשי וירניק", "day": 10, "monthKey": "Tevet", "hebrewLabel": "י' טבת", "family": "וירניק", "familyEmail": "rv7123535@gmail.com" },
+  { "name": "ארי וירניק", "day": 10, "monthKey": "Sivan", "hebrewLabel": "י' סיון", "family": "וירניק", "familyEmail": "rv7123535@gmail.com" },
+
+  { "name": "בלימי מילשטיין", "day": 18, "monthKey": "Iyyar", "hebrewLabel": "יח' אייר", "family": "מילשטיין בית שמש", "familyEmail": "blimilsh@gmail.com" },
+  { "name": "חיים מילשטיין", "day": 4, "monthKey": "Shevat", "hebrewLabel": "ד' שבט", "family": "מילשטיין בית שמש", "familyEmail": "blimilsh@gmail.com" },
+  { "name": "הני מילשטיין", "day": 20, "monthKey": "Iyyar", "hebrewLabel": "כ' אייר", "family": "מילשטיין בית שמש", "familyEmail": "blimilsh@gmail.com" },
+  { "name": "צביקי מילשטיין", "day": 29, "monthKey": "Av", "hebrewLabel": "כט' אב", "family": "מילשטיין בית שמש", "familyEmail": "blimilsh@gmail.com" },
+  { "name": "דודי מילשטיין", "day": 6, "monthKey": "Elul", "hebrewLabel": "ו' אלול", "family": "מילשטיין בית שמש", "familyEmail": "blimilsh@gmail.com" },
+  { "name": "ריקי מילשטיין", "day": 3, "monthKey": "Av", "hebrewLabel": "ג' אב", "family": "מילשטיין בית שמש", "familyEmail": "blimilsh@gmail.com" },
+
+  { "name": "עטרה חסידה", "day": 1, "monthKey": "Shevat", "hebrewLabel": "א' שבט", "family": "חסידה", "familyEmail": "atara70999@gmail.com" },
+  { "name": "שמחה חסידה", "day": 10, "monthKey": "Kislev", "hebrewLabel": "י' כסליו", "family": "חסידה", "familyEmail": "atara70999@gmail.com" },
+  { "name": "ארי חסידה", "day": 17, "monthKey": "Cheshvan", "hebrewLabel": "יז' חשון", "family": "חסידה", "familyEmail": "atara70999@gmail.com" },
+  { "name": "אלי חסידה", "day": 5, "monthKey": "Sivan", "hebrewLabel": "ה' סיון", "family": "חסידה", "familyEmail": "atara70999@gmail.com" },
+
+  { "name": "יהודית מילשטיין", "day": 4, "monthKey": "Shevat", "hebrewLabel": "ד' שבט", "family": "מילשטיין אשדוד", "familyEmail": "yd0545893417@gmail.com" },
+  { "name": "מוטי מילשטיין", "day": 15, "monthKey": "Adar", "hebrewLabel": "טו' אדר", "family": "מילשטיין אשדוד", "familyEmail": "yd0545893417@gmail.com" },
+  { "name": "אלי מילשטיין", "day": 3, "monthKey": "Av", "hebrewLabel": "ג' אב", "family": "מילשטיין אשדוד", "familyEmail": "yd0545893417@gmail.com" },
+
+  { "name": "הני פלבינסקי", "day": 12, "monthKey": "Tevet", "hebrewLabel": "יב' טבת", "family": "פלבינסקי", "familyEmail": "p0556731786@gmail.com" },
+  { "name": "אבריימי פלבינסקי", "day": 21, "monthKey": "Iyyar", "hebrewLabel": "כא' אייר", "family": "פלבינסקי", "familyEmail": "p0556731786@gmail.com" },
+  { "name": "צביקי פלבינסקי", "day": 19, "monthKey": "Sivan", "hebrewLabel": "יט' סיון", "family": "פלבינסקי", "familyEmail": "p0556731786@gmail.com" }
 ]
